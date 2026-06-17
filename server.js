@@ -17,8 +17,10 @@ app.use('/graphql',
 
 );
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
 
-    console.log(`Servidor ejecutándose en http://localhost:${process.env.PORT || 3000}/graphql`);
+app.listen(PORT, () => {
+
+    console.log(`Servidor ejecutándose en puerto ${PORT}`);
 
 });
